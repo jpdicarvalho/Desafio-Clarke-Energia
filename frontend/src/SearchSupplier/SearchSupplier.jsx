@@ -3,11 +3,14 @@ import { gql } from "../config/apolloClient";
 import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
 
+//Estilo css da página
 import './SearchSupplie.css'
 
-import Logo from '../assets/image.png'
-import image_section from '../assets/image-section.png'
+//Imagens estáticas
+import Logo from '../assets/logo.png'
+import imageSolution from '../assets/image-solution.png'
 
+//Ícones
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { MdOutlineStar } from "react-icons/md";
 import { BsBarChartFill } from "react-icons/bs";
@@ -126,7 +129,7 @@ function SearchSupplie () {
                     </div>
 
                     <div className='image__section'>
-                        <img className='inner_image_section' src={image_section} alt="" />
+                        <img className='inner_image__solution' src={imageSolution} alt="" />
                     </div>
 
                 </div>
@@ -144,6 +147,7 @@ function SearchSupplie () {
                     }
                     {/* Falta tratar essa situação */}
                     {data && data.fornecedores.length === 0 && <p>Nenhum fornecedor encontrado.</p>}
+                    
                     {data && data.fornecedores.map((fornecedor) => (
                         
                         <div key={fornecedor.id} className="fornecedor__card">
