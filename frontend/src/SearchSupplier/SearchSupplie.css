@@ -134,6 +134,14 @@
 .Search-btn:active {
     transform: scale(0.9);
 }
+.spinner {
+    width: 45px; 
+    height: 45px;
+    border: 4px solid #00bf6a;  /* Cor de fundo do spinner */
+    border-top: 4px solid #f6f6f6; /* Cor da “cabeça” do spinner */
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+}
 .result__section{
     display: grid;
     gap: 15px; /* Espaçamento entre os cards */
@@ -231,6 +239,19 @@
     width: 99%;
     height: 99%;
 }
+.message__erro__request{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: gray;
+    text-align: center;
+
+}
+.icon__VscError{
+    font-size: 70px;
+}
+
 
 @keyframes jello-vertical {
     0% {
@@ -253,6 +274,14 @@
     }
     100% {
         transform: scale3d(1, 1, 1);
+    }
+}
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
     }
 }
 
