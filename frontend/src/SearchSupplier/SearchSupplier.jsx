@@ -1,7 +1,7 @@
-import { useLazyQuery } from "@apollo/client";
-import { gql } from "../config/apolloClient";
-import { useState, useEffect } from 'react';
-import { motion } from "framer-motion";
+import { useLazyQuery } from "@apollo/client"; // Importando `useLazyQuery` do Apollo Client para buscar dados manualmente na ação do usuário
+import { GET_FORNECEDORES } from "../graphql/queries"; // Importando a consulta GraphQL para buscar dados do fornecedor
+import { useState, useEffect } from 'react'; // Importando React hooks
+import { motion } from "framer-motion"; // Importando `motion` para adicionar animação no input de consumo de energia
 
 //Estilo css da página
 import './SearchSupplie.css'
@@ -16,21 +16,6 @@ import { MdOutlineStar } from "react-icons/md";
 import { BsBarChartFill } from "react-icons/bs";
 import { FaUsers } from "react-icons/fa6";
 import { VscError } from "react-icons/vsc";
-
-const GET_FORNECEDORES = gql`
-    query GetFornecedores($consumo: Int!) {
-        fornecedores(consumo: $consumo) {
-            id
-            nome
-            logo
-            estado
-            custo_por_kwh
-            limite_minimo_kwh
-            avaliacaoMedia
-            clientesAtendidos
-        }
-    }
-`;
 
 
 function SearchSupplie () {
@@ -125,7 +110,6 @@ function SearchSupplie () {
                             </motion.div>
                              
                         )}
-                        
                     </div>
 
                     <div className='image__section'>
