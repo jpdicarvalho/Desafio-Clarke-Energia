@@ -112,26 +112,33 @@ function SearchSupplie () {
                         )}
                     </div>
 
-                    <div className='image__section'>
-                        <img className='inner_image__solution' src={imageSolution} alt="" />
+                    <div className='section__image__solution'>
+                        <img className='inner__image__solution' src={imageSolution} alt="" />
                     </div>
 
                 </div>
 
-                {/* Exibindo os fornecedores */}
+                {/* Seção de renderização dos fornecedores retornados*/}
                 <div className="result__section">
+                    {/* Exibindo texto enquando a colsulta é realizada */}
                     {loading &&
                         <p>Buscando fornecedores...</p>
                     }
+
+                    {/* Tratamento de erro caso tenha erro na request de busca de fornecedor */}
                     {showErroRequest &&
                         <p className="message__erro__request">
                             <VscError className="icon__VscError"/><br/>
                             Hummhumm...<br />Parece que houve um problema ao realizar a busca. Tente novamente mais tarde.
                         </p>
                     }
-                    {/* Falta tratar essa situação */}
-                    {data && data.fornecedores.length === 0 && <p>Nenhum fornecedor encontrado.</p>}
-                    
+
+                    {/* Tratamento de cenário para o caso da consulta não retornar nenhum fornecedor */}
+                    {data && data.fornecedores.length === 0 &&
+                        <p>Nenhum fornecedor encontrado.</p>
+                    }
+
+                    {/* Exibindo os fornecedores */}
                     {data && data.fornecedores.map((fornecedor) => (
                         
                         <div key={fornecedor.id} className="fornecedor__card">
@@ -166,13 +173,11 @@ function SearchSupplie () {
                                     
                                 </div>
                                 
-                                
                                 <div className="bottom__card">
                                     <div className="box__value__kwh">
                                         <h3>R$ {fornecedor.custo_por_kwh.toFixed(2)}</h3>
                                         <p className="text__kwh">/kWh</p>
                                     </div>
-                                    
 
                                     <button className="btn__fake">
                                         <IoIosArrowRoundForward className="icon__IoIosArrowRoundForward in__btn__fake"/>
