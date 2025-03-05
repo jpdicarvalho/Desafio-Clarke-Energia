@@ -14,12 +14,12 @@ export const resolvers = {
 
             return fornecedores.map(fornecedor => ({
                 ...fornecedor,
-                avaliacaoMedia: fornecedor.avaliacoes.length > 0
-                    ? fornecedor.avaliacoes.reduce((acc, a) => acc + a.nota, 0) / fornecedor.avaliacoes.length
-                    : 0,
-                clientesAtendidos: fornecedor.clientesAtendidos
-                    ? fornecedor.clientesAtendidos.quantidade
-                    : 0
+                // Calcula a Avaliação média do fornecedor
+                avaliacaoMedia: fornecedor.avaliacoes.length > 0 ? fornecedor.avaliacoes.reduce((acc, a) => acc + a.nota, 0) / fornecedor.avaliacoes.length : 0,
+                // Obtém o total de avaliações do fornecedor
+                totalAvaliacoes: fornecedor.avaliacoes.length,
+                // Obtém o total de avaliações do fornecedor
+                clientesAtendidos: fornecedor.clientesAtendidos ? fornecedor.clientesAtendidos.quantidade : 0 
             }));
         },
     },

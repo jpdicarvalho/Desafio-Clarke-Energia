@@ -8,15 +8,14 @@ export const typeDefs = `#graphql
         limite_minimo_kwh: Int!
         avaliacoes: [Avaliacao]
         avaliacaoMedia: Float
-        clientesAtendidos: Int # Adicionamos o número total de clientes atendidos
+        totalAvaliacoes: Int
+        clientesAtendidos: Int
     }
 
     type Avaliacao {
         id: ID!
         fornecedorId: Int!
         nota: Float!
-        comentario: String
-        data: String!
     }
 
     type Query {
