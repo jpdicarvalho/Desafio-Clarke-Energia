@@ -9,15 +9,17 @@ datasource db {
 }
 
 model Fornecedor {
-  id                Int              @id @default(autoincrement())
-  nome              String
-  logo              String
-  estado            String
-  custo_por_kwh     Float
-  limite_minimo_kwh Int
-  avaliacoes         Avaliacao[]
+  id                 Int     @id @default(autoincrement())
+  nome               String
+  logo               String
+  estado             String
+  custo_por_kwh      Float
+  limite_minimo_kwh  Int
 
-  @@map("fornecedores")
+  avaliacoes         Avaliacao[]  // Relacionamento com avaliações
+  clientesAtendidos  ClienteAtendido?  // Relacionamento 1-1 opcional com clientes atendidos
+
+  @@map("fornecedores") // Nome real da tabela no banco
 }
 
 model Avaliacao {
@@ -33,10 +35,11 @@ model Avaliacao {
 }
 
 model ClienteAtendido {
-  id           Int        @id @default(autoincrement())
-  fornecedorId Int        @unique
-  quantidade   Int        @default(0)
-  fornecedor   Fornecedor @relation(fields: [fornecedorId], references: [id], onDelete: Cascade)
+  id            Int     @id @default(autoincrement())
+  fornecedorId  Int     @unique // Um fornecedor tem um único número de clientes atendidos
+  quantidade    Int     @default(0) // Número total de clientes atendidos
 
-  @@map("clientes_atendidos")
+  fornecedor    Fornecedor @relation(fields: [fornecedorId], references: [id], onDelete: Cascade) // Relacionamento
+
+  @@map("clientes_atendidos") // Nome real da tabela no banco
 }

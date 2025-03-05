@@ -8,7 +8,6 @@
     "compile": "tsc",
     "start": "npm run compile && node ./dist/src/index.js",
     "migrate": "npx prisma migrate dev --name init"
-
   },
   "keywords": [],
   "author": "",

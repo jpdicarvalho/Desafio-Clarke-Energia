@@ -179,10 +179,6 @@ async function main() {
             {
                 fornecedorId: fornecedores[14].id,
                 quantidade: 195,
-            },
-            {
-                fornecedorId: fornecedores[15].id,
-                quantidade: 220,
             }
         ],
     });

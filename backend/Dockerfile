@@ -20,4 +20,4 @@ RUN npx prisma generate
 EXPOSE 4000
 
 # Comando para iniciar o servidor
-CMD ["node", "./dist/index.js"]
+CMD ["node", "./dist/src/index.js"]
