@@ -1,10 +1,11 @@
 # DCE STATUS - Em desenvolvimento
 
 ## Sobre o Projeto  
-Este projeto é uma **Single Page Application (SPA)** que permite aos usuários informarem seu consumo mensal de energia e encontrarem o fornecedor mais adequado para suas necessidades.  
+Este projeto é uma **Single Page Application (SPA)** que permite aos usuários informarem seu consumo mensal de energia e encontrarem o fornecedor mais adequado para suas necessidades.
+### **Link da aplicação em produção:** https://desafio-clarke-energia.netlify.app
 
 ## Requisitos Técnicos implementados
-###**Frontend**
+### **Frontend**
  - **Tecnologias:** React, Vite, CSS
  - **Descrição:** Para o desenvolvimento do frontend da solução, ultilizei o react + vite, com css puro para a estilização. E por fim, ultilizei o netlify como serviço de hospedagem
 ### **Backend**
@@ -14,9 +15,10 @@ Este projeto é uma **Single Page Application (SPA)** que permite aos usuários 
  - **Tecnologias:** MySQL e Prisma
  - **Descrição:**  Como opção de db usei o mysql também hospedado no railway e o prisma como ORM (SIGNIFICADO ORM)
 
-- **SOBRE O DOCKER**
-  Implementei o dokerezição de todo o proje...
-  
+### **SOBRE O DOCKER**
+- **Tecnologias:** Docker e Docker-Composer
+- **Descrição:** Implementei as dockerização do projeto, para que seja possivel rodar a aplicação em quanlquer ambiente/máquina, permitindo rodar toda a aplicação com um único comando.
+
 ## Como Rodar o Projeto Localmente?
 
 Antes de começar, verifique se sua máquina possui os seguintes pré-requisitos instalados:  
