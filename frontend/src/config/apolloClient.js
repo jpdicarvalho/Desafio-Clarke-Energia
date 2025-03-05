@@ -1,7 +1,7 @@
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 
 const client = new ApolloClient ({
-    uri: "http://localhost:4000/",
+    uri: "https://desafio-clarke-energia-api-graphql.up.railway.app/",
     cache: new InMemoryCache(),
 });
 
