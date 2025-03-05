@@ -10,6 +10,7 @@ export const GET_FORNECEDORES = gql`
             custo_por_kwh
             limite_minimo_kwh
             avaliacaoMedia
+            totalAvaliacoes
             clientesAtendidos
         }
     }

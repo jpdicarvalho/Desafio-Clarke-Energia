@@ -151,7 +151,11 @@ function SearchSupplie () {
                                 
                                 <div className="box__rating">
                                     <MdOutlineStar className="icon__MdOutlineStar"/>
-                                    <p className="text__rating">{fornecedor.avaliacaoMedia.toFixed(1)} (422 avaliações)</p>
+                                    <p className="text__rating">
+                                        {fornecedor.avaliacaoMedia.toFixed(1)} ({fornecedor.totalAvaliacoes > 1 ?
+                                                                                `${fornecedor.totalAvaliacoes} Avaliações`:
+                                                                                `${fornecedor.totalAvaliacoes} Avaliação`})
+                                    </p>
                                 </div>
 
                                 <div className="container__insights">

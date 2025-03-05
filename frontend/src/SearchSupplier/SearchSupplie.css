@@ -174,13 +174,13 @@
 }
 .box__rating{
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
-    width: 165px;
 }
 .text__rating{
     font-size: 14px;
     color: gray;
+    margin-left: 3px;
 }
 .icon__MdOutlineStar{
     font-size: 18px;
