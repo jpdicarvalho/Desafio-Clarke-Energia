@@ -217,7 +217,52 @@ async function main() {
             },
             {
                 fornecedorId: fornecedores[2].id,
+                nota: 4.7,
+                comentario: "Poderia ter suporte 24h, mas no geral é bom.",
+            },
+            {
+                fornecedorId: fornecedores[3].id,
+                nota: 4.3,
+                comentario: "Poderia ter suporte 24h, mas no geral é bom.",
+            },
+            {
+                fornecedorId: fornecedores[3].id,
+                nota: 4.2,
+                comentario: "Poderia ter suporte 24h, mas no geral é bom.",
+            },
+            {
+                fornecedorId: fornecedores[4].id,
+                nota: 4.9,
+                comentario: "Poderia ter suporte 24h, mas no geral é bom.",
+            },
+            {
+                fornecedorId: fornecedores[5].id,
+                nota: 4.5,
+                comentario: "Poderia ter suporte 24h, mas no geral é bom.",
+            },
+            {
+                fornecedorId: fornecedores[6].id,
                 nota: 4.0,
+                comentario: "Poderia ter suporte 24h, mas no geral é bom.",
+            },
+            {
+                fornecedorId: fornecedores[6].id,
+                nota: 4.7,
+                comentario: "Poderia ter suporte 24h, mas no geral é bom.",
+            },
+            {
+                fornecedorId: fornecedores[6].id,
+                nota: 4.8,
+                comentario: "Poderia ter suporte 24h, mas no geral é bom.",
+            },
+            {
+                fornecedorId: fornecedores[7].id,
+                nota: 4.3,
+                comentario: "Poderia ter suporte 24h, mas no geral é bom.",
+            },
+            {
+                fornecedorId: fornecedores[8].id,
+                nota: 4.6,
                 comentario: "Poderia ter suporte 24h, mas no geral é bom.",
             }
         ],
