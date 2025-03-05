@@ -134,55 +134,55 @@ async function main() {
             },
             {
                 fornecedorId: fornecedores[3].id,
-                quantidade: 120,
+                quantidade: 140,
             },
             {
                 fornecedorId: fornecedores[4].id,
-                quantidade: 120,
+                quantidade: 170,
             },
             {
                 fornecedorId: fornecedores[5].id,
-                quantidade: 120,
+                quantidade: 110,
             },
             {
                 fornecedorId: fornecedores[6].id,
-                quantidade: 120,
+                quantidade: 190,
             },
             {
                 fornecedorId: fornecedores[7].id,
-                quantidade: 120,
+                quantidade: 145,
             },
             {
                 fornecedorId: fornecedores[8].id,
-                quantidade: 120,
+                quantidade: 130,
             },
             {
                 fornecedorId: fornecedores[9].id,
-                quantidade: 120,
+                quantidade: 90,
             },
             {
                 fornecedorId: fornecedores[10].id,
-                quantidade: 120,
+                quantidade: 125,
             },
             {
                 fornecedorId: fornecedores[11].id,
-                quantidade: 120,
+                quantidade: 165,
             },
             {
                 fornecedorId: fornecedores[12].id,
-                quantidade: 120,
+                quantidade: 100,
             },
             {
                 fornecedorId: fornecedores[13].id,
-                quantidade: 120,
+                quantidade: 105,
             },
             {
                 fornecedorId: fornecedores[14].id,
-                quantidade: 120,
+                quantidade: 195,
             },
             {
                 fornecedorId: fornecedores[15].id,
-                quantidade: 120,
+                quantidade: 220,
             }
         ],
     });
