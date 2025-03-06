@@ -1,8 +1,6 @@
 # Sobre o Projeto  
 Este projeto é uma **Single Page Application (SPA)** desenvolvida para facilitar a escolha do melhor fornecedor de energia com base no consumo mensal informado pelo usuário. Desse modo, ao inserir a quantidade de energia consumida (em kWh), **a aplicação retorna uma lista de fornecedores que possuem um limite mínimo de kWh menor que o valor informado pelo usuário**. Além disso, cada fornecedor dispõe das seguintes informações: **nome, logo, estado de origem, custo por kWh, limite mínimo de kWh, número total de clientes e avaliação média dos clientes**.
 
-A aplicação foi projetada para oferecer uma **experiência rápida e intuitiva**, garantindo que o usuário encontre a melhor opção de fornecimento de energia de forma prática e eficiente.
-
 ## Requisitos Técnicos e Diferencias implementados
 
 ### **Frontend**
