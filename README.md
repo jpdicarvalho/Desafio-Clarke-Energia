@@ -7,7 +7,7 @@ A aplicação foi projetada para oferecer uma **experiência rápida e intuitiva
 
 ### **Frontend**
 - **Tecnologias Utilizadas:** React + Vite, CSS e Cypress.
-- **Descrição:** O frontend da solução está hospedado no **Netlify**, e para o seu desenvolvimento utilizei **React** e **Vite**, garantindo alta performance e modularidade. Já para a estilização, optei por usar o **CSS puro**, sem dependências externas. E, por fim, para validação da interface e experiência do usuário, foram implementados **testes automatizados end-to-end (E2E) com Cypress**, garantindo que a navegação e as interações funcionem corretamente. E, por fim, ultilizei o **Netlify** como serviço de hospedagem.
+- **Descrição:** O frontend da solução está hospedado no **Netlify**, e para o seu desenvolvimento utilizei **React** e **Vite**, garantindo alta performance e modularidade. Já para a estilização, optei por usar o **CSS puro**, sem dependências externas. Ademais, para validação da interface e experiência do usuário, foram implementados **testes automatizados end-to-end (E2E) com Cypress**, garantindo que a navegação e as interações funcionem corretamente. Portanto, todos os testes podem ser encontrados em **frontend/cypress/e2e/searchSupplie.cy.js**. E, por fim, ultilizei o **Netlify** como serviço de hospedagem.
   
 ### **Backend**
  - **Tecnologias:** API GraphQL com Node.js, Typescript, Jest e Supertest.
