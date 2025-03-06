@@ -161,18 +161,14 @@ function SearchSupplie () {
                                 <div className="container__insights">
                                     <div className="box__insights">
                                         <BsBarChartFill className="icon__insights"/>
-                                        <p className="text__insights">
-                                            Limite mínimo<br/>
-                                            {fornecedor.limite_minimo_kwh} kWh
-                                        </p>
+                                        <p className="text__insights"> Limite mínimo</p>
+                                        <p className="text__insights">{fornecedor.limite_minimo_kwh} kWh</p>
                                     </div>
 
                                     <div className="box__insights">
                                         <FaUsers className="icon__insights"/>
-                                        <p className="text__insights">
-                                            Clientes atendidos<br/>
-                                            {fornecedor.clientesAtendidos}+
-                                        </p>
+                                        <p className="text__insights">Clientes atendidos</p>
+                                        <p className="text__insights">{fornecedor.clientesAtendidos}+</p>
                                     </div>
                                     
                                 </div>

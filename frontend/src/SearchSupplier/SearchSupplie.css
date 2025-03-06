@@ -208,7 +208,6 @@
 .text__insights{
     display: flex;
     justify-content: center;
-    margin: 5px;
     width: 100%;
     font-size: 14px;
     text-align: center;
