@@ -5,7 +5,7 @@ Este projeto é uma **Single Page Application (SPA)** desenvolvida para facilita
 
 ### **Frontend**
 - **Tecnologias Utilizadas:** React + Vite, CSS e Cypress.
-- **Descrição:** O frontend da solução está hospedado no **Netlify**, e para o seu desenvolvimento utilizei **React** e **Vite**, garantindo alta performance e modularidade. Já para a estilização, optei por usar o **CSS puro**, sem dependências externas. Ademais, para validação da interface e experiência do usuário, foram implementados **testes automatizados end-to-end (E2E) com Cypress**, garantindo que a navegação e as interações funcionem corretamente. Portanto, todos os testes podem ser encontrados em **frontend/cypress/e2e/searchSupplie.cy.js**. E, por fim, ultilizei o **Netlify** como serviço de hospedagem.
+- **Descrição:** O frontend da solução está hospedado no **Netlify**, e para o seu desenvolvimento utilizei **React** e **Vite**, garantindo alta performance e modularidade. Já para a estilização, optei por usar o **CSS puro**, sem dependências externas. Ademais, para validação da interface e experiência do usuário, foram implementados **testes automatizados end-to-end (E2E) com Cypress**, garantindo que a navegação e as interações funcionem corretamente. Portanto, todos os testes podem ser encontrados em **frontend/cypress/e2e/searchSupplie.cy.js**.
   
 ### **Backend**
  - **Tecnologias:** API GraphQL com Node.js, Typescript, Jest e Supertest.
@@ -14,9 +14,15 @@ Este projeto é uma **Single Page Application (SPA)** desenvolvida para facilita
 ### **Banco de Dados**
 - **Tecnologias:** MySQL e Prisma ORM.
 - **Descrição:** O banco de dados foi modelado com **MySQL**, utilizando **Prisma ORM** e está atualmente hospedado no **Railway**. Além disso, o modelo foi estruturado aplicando **princípios de normalização**, visando eficiência e escalabilidade. Portanto, foram criadas três tabelas:
-  - **Fornecedores**: Armazena informações dos fornecedores de energia.
-  - **Avaliações**: Relacionada a fornecedores (1:N), contendo notas e comentários de clientes.
-  - **Clientes Atendidos**: Relacionada a fornecedores (1:1), registrando a quantidade de clientes.
+  - **Fornecedores**:
+      - **Descrição**: Armazena informações dos fornecedores de energia.
+      - **Relacionamento**: Um fornecedor pode ter várias avaliações e um total de clientes atendidos.
+  - **Avaliações**:
+      - **Descrição**: Armazena avaliações feitas pelos clientes sobre os fornecedores.
+      - **Relacionamento:** Cada avaliação está associada a um único fornecedor (1:N).
+  - **Clientes Atendidos**:
+      - **Descrição**: Armazena o número total de clientes atendidos por cada fornecedor.
+      - **Relacionamento:** Cada fornecedor possui um único registro de clientes atendidos (1:1).
 
   Dessa forma, para facilitar os testes, foi implementado um **script de seed** localizado em **backend/prisma/seed.ts**, responsável por popular automaticamente o banco de dados com fornecedores, avaliações e informações de clientes atendidos.
 
@@ -69,7 +75,7 @@ Caso queira acessar apenas a API GraphQL, use:
   ````sh
    http://localhost:4000
   ````
-## Comandos Úteis parar gerenciar os containers:
+## Comandos úteis parar gerenciar os containers:
 Parar os containers:
   ````sh
    docker-compose down
@@ -82,3 +88,5 @@ Reconstruir e subir os containers
   ````sh
   docker-compose up --build
   ````
+---
+### Desde já, agradeço a oportunidade de participar do processo seletivo. Fico à disposição para quaisquer dúvidas e/ou esclarecimentos, obrigado!
