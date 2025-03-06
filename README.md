@@ -44,11 +44,11 @@ Com a etapa anterior concluída, siga os seguintes passos:
 
 Abra um terminal e execute:  
   ```sh
-  git clone https://github.com/seu-usuario/dce-clarke.git
+  git clone https://github.com/jpdicarvalho/Desafio-Clarke-Energia.git
   ````
 Em seguida, acesse o diretório que contém o projeto  
   ````sh
-  cd DCE
+  cd Desafio-Clarke-Energia
   ````
 Agora, dentro da pasta do projeto, execute:
   ````sh
@@ -77,4 +77,8 @@ Parar os containers:
 Remover containers, imagens e volumes:
   ````sh
    docker-compose down --rmi all -v
+  ````
+Reconstruir e subir os containers
+  ````sh
+  docker-compose up --build
   ````
