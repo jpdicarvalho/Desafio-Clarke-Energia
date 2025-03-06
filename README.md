@@ -1,11 +1,11 @@
-# DCE STATUS - Em desenvolvimento
+# Sobre o Projeto  
+Este projeto é uma **Single Page Application (SPA)** desenvolvida para facilitar a escolha do melhor fornecedor de energia com base no consumo mensal informado pelo usuário. Ao inserir a quantidade de energia consumida (em kWh), a aplicação retorna uma lista de fornecedores disponíveis, considerando critérios como **custo por kWh, estado de origem, limite mínimo de fornecimento, número total de clientes atendidos e avaliação média dos clientes**.
 
-## Sobre o Projeto  
-Este projeto é uma **Single Page Application (SPA)** que permite aos usuários informarem seu consumo mensal de energia e encontrarem o fornecedor mais adequado para suas necessidades. A API permite que os usuários consultem fornecedores de energia elétrica com base no consumo informado, trazendo detalhes como avaliação média, custo por kWh e número de clientes atendidos.
+A aplicação foi projetada para oferecer uma **experiência rápida e intuitiva**, garantindo que o usuário encontre a melhor opção de fornecimento de energia de forma prática e eficiente.
 
-### **Link da aplicação em produção:** https://desafio-clarke-energia.netlify.app
+### **Acesse a aplicação em produção:** [Clique aqui](https://desafio-clarke-energia.netlify.app)
 
-## Requisitos Técnicos implementados
+## Requisitos Técnicos e Diferencias implementados
 
 ### **Frontend**
 - **Tecnologias Utilizadas:** React + Vite, CSS e Cypress.
