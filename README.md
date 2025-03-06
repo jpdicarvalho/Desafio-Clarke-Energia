@@ -20,7 +20,9 @@ A aplicação foi projetada para oferecer uma **experiência rápida e intuitiva
   - **Avaliações**: Relacionada a fornecedores (1:N), contendo notas e comentários de clientes.
   - **Clientes Atendidos**: Relacionada a fornecedores (1:1), registrando a quantidade de clientes.
 
-  Outrossim, para facilitar testes, foi implementado um **script de seed** (localizado em backend/prisma/seed.ts) que popula o banco com fornecedores, avaliações e dados de clientes atendidos.
+  Dessa forma, para facilitar os testes, foi implementado um **script de seed** localizado em **backend/prisma/seed.ts**, responsável por popular automaticamente o banco de dados com fornecedores, avaliações e informações de clientes atendidos.
+
+  Outrossim, vale resaltar que para cada fornecedor, foi gerada uma **logo fictícia**, cujo nome do arquivo está armazenado no banco de dados MySQL. No entanto, as imagens em si não são salvas diretamente no banco, mas sim em um **bucket S3 da AWS**, permitindo um carregamento otimizado via **CloudFront**, garantindo maior performance e disponibilidade na exibição dos recursos visuais da aplicação.  
 
 ### **Dokerização do projeto**
 - **Tecnologias:** Docker e Docker Compose.
