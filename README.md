@@ -3,7 +3,7 @@ Este projeto é uma **Single Page Application (SPA)** desenvolvida para facilita
 
 A aplicação foi projetada para oferecer uma **experiência rápida e intuitiva**, garantindo que o usuário encontre a melhor opção de fornecimento de energia de forma prática e eficiente.
 
-### **Acesse a aplicação em produção:** [Clique aqui](https://desafio-clarke-energia.netlify.app)
+### **Acesse a aplicação em produção:** https://desafio-clarke-energia.netlify.app
 
 ## Requisitos Técnicos e Diferencias implementados
 
