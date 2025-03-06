@@ -1,25 +1,36 @@
 # DCE STATUS - Em desenvolvimento
 
 ## Sobre o Projeto  
-Este projeto é uma **Single Page Application (SPA)** que permite aos usuários informarem seu consumo mensal de energia e encontrarem o fornecedor mais adequado para suas necessidades.
+Este projeto é uma **Single Page Application (SPA)** que permite aos usuários informarem seu consumo mensal de energia e encontrarem o fornecedor mais adequado para suas necessidades. A API permite que os usuários consultem fornecedores de energia elétrica com base no consumo informado, trazendo detalhes como avaliação média, custo por kWh e número de clientes atendidos.
+
 ### **Link da aplicação em produção:** https://desafio-clarke-energia.netlify.app
 
 ## Requisitos Técnicos implementados
 
 ### **Frontend**
 - **Tecnologias Utilizadas:** React + Vite, CSS e Cypress.
-- **Descrição:** O frontend da solução está hospedado no **Netlify**, e para o seu desenvolvimento utilizei **React** e **Vite**, garantindo alta performance e modularidade. Já para a estilização, optei por usar o **CSS puro**, sem dependências externas. E, por fim, para validação da interface e experiência do usuário, foram implementados **testes automatizados end-to-end (E2E) com Cypress**, garantindo que a navegação e as interações funcionem corretamente. E, por fim, ultilizei o  como serviço de hospedagem.
+- **Descrição:** O frontend da solução está hospedado no **Netlify**, e para o seu desenvolvimento utilizei **React** e **Vite**, garantindo alta performance e modularidade. Já para a estilização, optei por usar o **CSS puro**, sem dependências externas. E, por fim, para validação da interface e experiência do usuário, foram implementados **testes automatizados end-to-end (E2E) com Cypress**, garantindo que a navegação e as interações funcionem corretamente. E, por fim, ultilizei o **Netlify** como serviço de hospedagem.
   
 ### **Backend**
- - **Tecnologias:** API em GraphQL com Node.js e Typescript.
- - **Descrição:** Para a implementação do backend, desenvolvi a API em GraphQL com typescript conforme recomenda a documentação do Graphql. Além disso, use o Node.js para como framework de desenvolvimento. E por fim, ultilizei o serviço do Railway como serviço de hospedagem.
-### **Banco de Dados**
- - **Tecnologias:** MySQL e Prisma
- - **Descrição:**  Como opção de db usei o mysql também hospedado no railway e o prisma como ORM (SIGNIFICADO ORM)
+ - **Tecnologias:** API GraphQL com Node.js, Typescript, Jest e Supertest.
+ - **Descrição:** Para a implementação do backend, desenvolvi uma API em GraphQL utilizando TypeScript, seguindo as recomendações oficiais da documentação do GraphQL. Além disso, o desenvolvimento foi feito com Node.js, garantindo uma estrutura escalável e eficiente. Ademais, para garantir a qualidade e confiabilidade da API, **foram implementados testes automatizados utilizando Jest e Supertest**, conforme contido em **backend/tests/fornecedorResolver.test.ts**. E, por fim, ultilizei o **Railway** como serviço de hospedagem para a API.
 
-### **SOBRE O DOCKER**
-- **Tecnologias:** Docker e Docker-Composer
-- **Descrição:** Implementei as dockerização do projeto, para que seja possivel rodar a aplicação em quanlquer ambiente/máquina, permitindo rodar toda a aplicação com um único comando.
+### **Banco de Dados**
+- **Tecnologias:** MySQL e Prisma ORM.
+- **Descrição:** O banco de dados foi modelado com **MySQL**, utilizando **Prisma ORM** e está atualmente hospedado no **Railway**. Além disso, o modelo foi estruturado aplicando **princípios de normalização**, visando eficiência e escalabilidade. Portanto, foram criadas três tabelas:
+  - **Fornecedores**: Armazena informações dos fornecedores de energia.
+  - **Avaliações**: Relacionada a fornecedores (1:N), contendo notas e comentários de clientes.
+  - **Clientes Atendidos**: Relacionada a fornecedores (1:1), registrando a quantidade de clientes.
+
+  Outrossim, para facilitar testes, foi implementado um **script de seed** (localizado em backend/prisma/seed.ts) que popula o banco com fornecedores, avaliações e dados de clientes atendidos.
+
+### **Dokerização do projeto**
+- **Tecnologias:** Docker e Docker Compose.
+- **Descrição:** Para tornar a aplicação **portável e fácil de rodar em qualquer ambiente**, utilizei o **Docker** para containerizar os serviços. Isso permite que a aplicação seja executada sem necessidade de instalações manuais ou configurações específicas de cada máquina.
+
+- **Orquestração com Docker Compose:**  
+  Para evitar que cada serviço precise ser iniciado individualmente, implementei um **Docker Compose** que gerencia **backend, frontend e banco de dados** de forma automática. Assim, ao rodar um único comando, todos os containers sobem juntos e já conectados corretamente.
+
 
 ## Como Rodar o Projeto Localmente?
 
