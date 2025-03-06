@@ -13,7 +13,7 @@ Este projeto é uma **Single Page Application (SPA)** que permite aos usuários 
   
 ### **Backend**
  - **Tecnologias:** API GraphQL com Node.js, Typescript, Jest e Supertest.
- - **Descrição:** Para a implementação do backend, desenvolvi uma API em GraphQL utilizando TypeScript, seguindo as recomendações oficiais da documentação do GraphQL. Além disso, o desenvolvimento foi feito com Node.js, garantindo uma estrutura escalável e eficiente. Ademais, para garantir a **qualidade, confiabilidade e integridade da API**, implementei **testes automatizados** utilizando **Jest e Supertest**. Esses testes validam o correto funcionamento das queries GraphQL e ajudam a evitar regressões. Todos os testes podem ser encontrados em **backend/tests/fornecedorResolver.test.ts**. E, por fim, ultilizei o **Railway** como serviço de hospedagem para a API.
+ - **Descrição:** Para a implementação do backend, desenvolvi com Node.js uma API em GraphQL utilizando TypeScript, seguindo as recomendações oficiais da documentação do GraphQL. Ademais, para garantir a **qualidade, confiabilidade e integridade da API**, implementei **testes automatizados** utilizando **Jest e Supertest**. Esses testes validam o correto funcionamento das queries GraphQL e ajudam a evitar regressões. Todos os testes podem ser encontrados em **backend/tests/fornecedorResolver.test.ts**. E, por fim, ultilizei o **Railway** como serviço de hospedagem para a API.
 
 ### **Banco de Dados**
 - **Tecnologias:** MySQL e Prisma ORM.
