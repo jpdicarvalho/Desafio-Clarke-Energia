@@ -23,7 +23,6 @@ export const startServer = async () => {
         });
     });
 };
-// Inicia apenas fora do ambiente de testes
 if (process.env.NODE_ENV !== 'test') {
     startServer();
 }

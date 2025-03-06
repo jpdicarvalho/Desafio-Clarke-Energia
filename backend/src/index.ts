@@ -3,8 +3,8 @@ import { expressMiddleware } from '@apollo/server/express4';
 import express from 'express';
 import cors from 'cors';
 import { createServer } from 'http';
-import { typeDefs } from './schemas/fornecedorSchema.js';
-import { resolvers } from './resolvers/fornecedorResolver.js';
+import { typeDefs } from './schemas/fornecedorSchema';
+import { resolvers } from './resolvers/fornecedorResolver';
 
 import dotenv from 'dotenv';
 
@@ -30,7 +30,6 @@ export const startServer = async () => {
     });
 };
 
-// Inicia apenas fora do ambiente de testes
 if (process.env.NODE_ENV !== 'test') {
     startServer();
 }
