@@ -1,0 +1,28 @@
+{
+  "data": {
+    "fornecedores": [
+      {
+        "id": "1",
+        "nome": "Fabrício Viana",
+        "estado": "SP",
+        "avaliacaoMedia": 4.5,
+        "totalAvaliacoes": 10,
+        "limite_minimo_kwh": 5000,
+        "clientesAtendidos": 100,
+        "custo_por_kwh": 0.45,
+        "logo": "fornecedor1.png"
+      },
+      {
+        "id": "2",
+        "nome": "Keven Santos",
+        "estado": "RJ",
+        "avaliacaoMedia": 4.2,
+        "totalAvaliacoes": 8,
+        "limite_minimo_kwh": 6000,
+        "clientesAtendidos": 80,
+        "custo_por_kwh": 0.50,
+        "logo": "fornecedor2.png"
+      }
+    ]
+  }
+}

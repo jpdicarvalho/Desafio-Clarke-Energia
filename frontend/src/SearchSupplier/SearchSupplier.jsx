@@ -127,10 +127,12 @@ function SearchSupplie () {
 
                     {/* Tratamento de erro caso tenha erro na request de busca de fornecedor */}
                     {showErroRequest &&
-                        <p className="message__erro__request">
-                            <VscError className="icon__VscError"/><br/>
-                            Hummhumm...<br />Parece que houve um problema ao realizar a busca. Tente novamente mais tarde.
-                        </p>
+                        <div className="message__erro__request">
+                            <VscError className="icon__VscError"/>
+                            <p>Hummhumm...</p>
+                            <p>Parece que houve um problema ao realizar a busca. Tente novamente mais tarde.</p>
+                        </div>
+                        
                     }
 
                     {/* Tratamento de cenário para o caso da consulta não retornar nenhum fornecedor */}
