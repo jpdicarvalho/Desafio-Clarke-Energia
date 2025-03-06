@@ -5,9 +5,11 @@ Este projeto é uma **Single Page Application (SPA)** que permite aos usuários 
 ### **Link da aplicação em produção:** https://desafio-clarke-energia.netlify.app
 
 ## Requisitos Técnicos implementados
+
 ### **Frontend**
- - **Tecnologias:** React, Vite, CSS
- - **Descrição:** Para o desenvolvimento do frontend da solução, ultilizei o react + vite, com css puro para a estilização. E por fim, ultilizei o netlify como serviço de hospedagem
+- **Tecnologias Utilizadas:** React + Vite, CSS e Cypress.
+- **Descrição:** O frontend da solução está hospedado no **Netlify**, e para o seu desenvolvimento utilizei **React** e **Vite**, garantindo alta performance e modularidade. Já para a estilização, optei por usar o **CSS puro**, sem dependências externas. E, por fim, para validação da interface e experiência do usuário, foram implementados **testes automatizados end-to-end (E2E) com Cypress**, garantindo que a navegação e as interações funcionem corretamente. E, por fim, ultilizei o  como serviço de hospedagem.
+  
 ### **Backend**
  - **Tecnologias:** API em GraphQL com Node.js e Typescript.
  - **Descrição:** Para a implementação do backend, desenvolvi a API em GraphQL com typescript conforme recomenda a documentação do Graphql. Além disso, use o Node.js para como framework de desenvolvimento. E por fim, ultilizei o serviço do Railway como serviço de hospedagem.
