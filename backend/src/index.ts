@@ -1,24 +1,36 @@
 import { ApolloServer } from '@apollo/server';
-import { startStandaloneServer } from '@apollo/server/standalone';
-import { typeDefs } from './schemas/fornecedorSchema.js'; // Certifique-se de que está correto
+import { expressMiddleware } from '@apollo/server/express4';
+import express from 'express';
+import cors from 'cors';
+import { createServer } from 'http';
+import { typeDefs } from './schemas/fornecedorSchema.js';
 import { resolvers } from './resolvers/fornecedorResolver.js';
+
 import dotenv from 'dotenv';
 
 dotenv.config();
 
-const server = new ApolloServer({
-    typeDefs,
-    resolvers,
-});
+const app = express();
+app.use(cors());
+app.use(express.json());
 
+const server = new ApolloServer({ typeDefs, resolvers });
 
-const PORT = process.env.PORT || 4000;
+export const startServer = async () => {
+    await server.start();
+    app.use('/graphql', expressMiddleware(server));
 
-const startServer = async () => {
-    const { url } = await startStandaloneServer(server, {
-        listen: { port: Number(PORT) },
+    return new Promise<{ httpServer: any }>((resolve) => {
+        const PORT = process.env.PORT || 4000;
+        const httpServer = createServer(app);
+        httpServer.listen(PORT, () => {
+            console.log(`Server ready at: http://localhost:${PORT}/graphql`);
+            resolve({ httpServer });
+        });
     });
-    console.log(`🚀 Server ready at: ${url}`);
 };
 
-startServer();
+// Inicia apenas fora do ambiente de testes
+if (process.env.NODE_ENV !== 'test') {
+    startServer();
+}
