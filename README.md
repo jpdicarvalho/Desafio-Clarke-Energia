@@ -127,7 +127,7 @@ Agora, em um terminal paralelo, execulte o seguinte comando **dentro do diretór
   ````sh
   npx cypress open
   ````
-Isso deve abrir a tela do cypress com duas opções de testes, portanto, selecione E2E 'Testing'. Em seguida, selecione um navegador de sua preferencia (recomendo o chrome) e clique em 'Start E2E Testing in Chrome'. Por último, selecione o arquivo 'searchSupplie.cy.js' e aguarde os testes serem execultados.
+Isso deve abrir a tela do cypress com duas opções de testes, portanto, selecione E2E 'Testing'. Em seguida, selecione um navegador de sua preferencia e clique em 'Start E2E Testing in Chrome'. Por último, selecione o arquivo 'searchSupplie.cy.js' e aguarde os testes serem execultados.
 
 ---
 ### Desde já, agradeço a oportunidade de participar do processo seletivo. Fico à disposição para quaisquer dúvidas e/ou esclarecimentos, obrigado!
