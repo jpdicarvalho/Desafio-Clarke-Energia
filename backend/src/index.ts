@@ -11,7 +11,15 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
-app.use(cors());
+
+// Configuração do CORS para permitir requisições do seu frontend no Netlify
+app.use(cors({
+    origin: 'https://desafio-clarke-energia.netlify.app', // Permite apenas essa origem
+    methods: ['POST', 'GET', 'OPTIONS'], // Métodos permitidos
+    allowedHeaders: ['Content-Type', 'Authorization'], // Cabeçalhos permitidos
+    credentials: true // Caso precise enviar cookies/autenticação
+}));
+
 app.use(express.json());
 
 const server = new ApolloServer({ typeDefs, resolvers });
