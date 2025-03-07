@@ -13,6 +13,8 @@ RUN npm install --include=dev
 # Copia o restante do código para o container
 COPY . .
 
+RUN npx prisma generate
+
 EXPOSE 4000
 
 CMD [ "node", "./dist/src/index.js" ]
