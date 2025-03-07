@@ -12,3 +12,9 @@ RUN npm install --include=dev
 
 # Copia o restante do código para o container
 COPY . .
+
+RUN npm run compile
+
+EXPOSE 4000
+
+CMD [ "node", "./dist/src/index.js" ]
