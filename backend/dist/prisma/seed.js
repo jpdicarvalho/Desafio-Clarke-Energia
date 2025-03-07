@@ -21,7 +21,6 @@ async function isDatabasePopulated() {
 async function main() {
     //Armazenando o resultado da função
     const dbPopulated = await isDatabasePopulated();
-    console.log(dbPopulated);
     if (dbPopulated) { //Verifica se 'dbPopulated' é true, se for inicia a aplicação
         console.log("Banco de dados já possui registros. Iniciando aplicação...");
         return;
