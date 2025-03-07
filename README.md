@@ -73,7 +73,7 @@ Depois, para acessar a aplicação, use:
   ````
 Caso queira acessar apenas a API GraphQL, use:
   ````sh
-   http://localhost:4000
+   http://localhost:4000/graphql
   ````
 ## Comandos úteis parar gerenciar os containers:
 Parar os containers:
