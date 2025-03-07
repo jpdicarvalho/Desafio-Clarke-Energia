@@ -18,7 +18,7 @@ services:
   backend:
     build: 
       context: ./backend 
-    container_name: dce-backend
+    container_name: DCE-backend
     restart: always
     depends_on:
       - mysql
@@ -34,12 +34,12 @@ services:
       - ./backend:/app
       - /app/node_modules
     command: >
-      sh -c "npx prisma migrate deploy && npx tsx prisma/seed.ts && node ./dist/src/index.js"
+      sh -c "npx prisma generate && npx prisma migrate deploy && npx tsx prisma/seed.ts && node ./dist/src/index.js"
 
   frontend:
     build: 
       context: ./frontend
-    container_name: dce-frontend
+    container_name: DCE-frontend
     restart: always
     depends_on:
       - backend
@@ -50,6 +50,8 @@ services:
     volumes:
       - ./frontend:/app
       - /app/node_modules
+    command: >
+      sh -c "npm run dev"
 
 networks:
   app_network:

@@ -12,12 +12,3 @@ RUN npm install
 
 # Copia todo o código para o container
 COPY . .
-
-# Compila a aplicação
-RUN npm run build
-
-# Expõe a porta que o backend usa
-EXPOSE 5173
-
-# Comando para iniciar o servidor (executa o código já compilado)
-CMD ["npm", "run", "dev"]

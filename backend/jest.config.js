@@ -6,4 +6,7 @@ export default {
       '^.+\\.(ts|tsx)$': ['ts-jest', { useESM: true }]
   },
   extensionsToTreatAsEsm: ['.ts'],
+  moduleNameMapper: {
+      '^(\\.{1,2}/.*)\\.js$': '$1' // Corrige os imports .js nos testes
+  }
 };

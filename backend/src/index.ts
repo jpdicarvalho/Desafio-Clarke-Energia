@@ -3,8 +3,8 @@ import { expressMiddleware } from '@apollo/server/express4';
 import express from 'express';
 import cors from 'cors';
 import { createServer } from 'http';
-import { typeDefs } from './schemas/fornecedorSchema';
-import { resolvers } from './resolvers/fornecedorResolver';
+import { typeDefs } from './schemas/fornecedorSchema.js';
+import { resolvers } from './resolvers/fornecedorResolver.js';
 
 import dotenv from 'dotenv';
 

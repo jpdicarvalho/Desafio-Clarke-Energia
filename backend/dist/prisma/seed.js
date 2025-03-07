@@ -1,7 +1,32 @@
 import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
+/*
+* Essa função verifica se o banco de dados possuí registro. Se tiver algum
+* registro em alguma tabela ele 'true'
+*/
+async function isDatabasePopulated() {
+    try {
+        const [fornecedores, avaliacoes, clientesAtendidos] = await Promise.all([
+            prisma.fornecedor.count(),
+            prisma.avaliacao.count(),
+            prisma.clienteAtendido.count()
+        ]);
+        return fornecedores > 0 || avaliacoes > 0 || clientesAtendidos > 0;
+    }
+    catch (error) {
+        console.error("Erro ao verificar o banco de dados:", error);
+        return false;
+    }
+}
 async function main() {
-    // Criando fornecedores
+    //Armazenando o resultado da função
+    const dbPopulated = await isDatabasePopulated();
+    console.log(dbPopulated);
+    if (dbPopulated) { //Verifica se 'dbPopulated' é true, se for inicia a aplicação
+        console.log("Banco de dados já possui registros. Iniciando aplicação...");
+        return;
+    }
+    // Criando fornecedores caso 'dbPopulated' não seja verdadeiro, ou seja
     await prisma.fornecedor.createMany({
         data: [
             {
