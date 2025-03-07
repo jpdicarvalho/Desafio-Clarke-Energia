@@ -5,11 +5,11 @@ Este projeto é uma **Single Page Application (SPA)** desenvolvida para facilita
 
 ### **Frontend**
 - **Tecnologias Utilizadas:** React + Vite, CSS e Cypress.
-- **Descrição:** O frontend da solução está hospedado no **Netlify**, e para o seu desenvolvimento utilizei **React** e **Vite**, garantindo alta performance e modularidade. Já para a estilização, optei por usar o **CSS puro**, sem dependências externas. Ademais, para validação da interface e experiência do usuário, foram implementados **testes automatizados end-to-end (E2E) com Cypress**, garantindo que a navegação e as interações funcionem corretamente. Portanto, todos os testes podem ser encontrados em **frontend/cypress/e2e/searchSupplie.cy.js**.
+- **Descrição:** O frontend da solução está hospedado no **Netlify**, e para o seu desenvolvimento utilizei **React** e **Vite**, garantindo alta performance e modularidade. Já para a estilização, optei por usar o **CSS puro**, sem dependências externas. Ademais, para validação da interface e experiência do usuário, foram implementados **testes automatizados end-to-end (E2E) com Cypress**, garantindo que a navegação e as interações funcionem corretamente. Portanto, o código fonte dos testes pode ser encontrado em **frontend/cypress/e2e/searchSupplie.cy.js**.
   
 ### **Backend**
  - **Tecnologias:** API GraphQL com Node.js, Typescript, Jest e Supertest.
- - **Descrição:** Para a implementação do backend, desenvolvi com Node.js uma API em GraphQL utilizando TypeScript, seguindo as recomendações oficiais da documentação do GraphQL. Ademais, para garantir a **qualidade, confiabilidade e integridade da API**, implementei **testes automatizados** utilizando **Jest e Supertest**. Sendo assim, esses testes validam o correto funcionamento das queries GraphQL e ajudam a evitar regressões. Portanto, todos os testes podem ser encontrados em **backend/tests/fornecedorResolver.test.ts**. E, por fim, ultilizei o **Railway** como serviço de hospedagem para a API.
+ - **Descrição:** Para a implementação do backend, desenvolvi com Node.js uma API em GraphQL utilizando TypeScript, seguindo as recomendações oficiais da documentação do GraphQL. Ademais, para garantir a **qualidade, confiabilidade e integridade da API**, implementei **testes automatizados** utilizando **Jest e Supertest**. Sendo assim, esses testes validam o correto funcionamento das queries GraphQL e ajudam a evitar regressões. Portanto, o código fonte dos testes pode se encontrado em **backend/tests/fornecedorResolver.test.ts**. E, por fim, ultilizei o **Railway** como serviço de hospedagem para a API.
 
 ### **Banco de Dados**
 - **Tecnologias:** MySQL e Prisma ORM.
@@ -88,5 +88,46 @@ Reconstruir e subir os containers
   ````sh
   docker-compose up --build
   ````
+## Como rodar os testes?
+**1. Backend**
+ 
+Fora do container, acesse o seguinte diretório:
+  ````sh
+  cd backend
+  ````
+Instale as dependências
+  ````sh
+  npm install
+  ````
+No arquivo .env, troque o banco de dados para:
+  ````sh
+  DATABASE_URL="mysql://root:qafFdOrkKUYwofilfHSkIUcIIHElmFqI@nozomi.proxy.rlwy.net:22845/railway"
+  ````
+Agora, ainda no diretório backend, execulte:
+  ````sh
+  npm run test
+  ````
+
+**1. Frontend**
+
+Fora do container, acesse o seguinte diretório:
+  ````sh
+  cd frontend
+  ````
+Instale as dependências e em seguida o cypress (caso não possua):
+  ````sh
+  npm install
+  npm install cypress --save-dev
+  ````
+Execulte o frontend:
+  ````sh
+  npm run dev
+  ````
+Agora, em um terminal paralelo, execulte o seguinte comando **dentro do diretório frontend**
+  ````sh
+  npx cypress open
+  ````
+Isso deve abrir a tela do cypress com duas opções de testes, portanto, selecione E2E 'Testing'. Em seguida, selecione um navegador de sua preferencia (recomendo o chrome) e clique em 'Start E2E Testing in Chrome'. Por último, selecione o arquivo 'searchSupplie.cy.js' e aguarde os testes serem execultados.
+
 ---
 ### Desde já, agradeço a oportunidade de participar do processo seletivo. Fico à disposição para quaisquer dúvidas e/ou esclarecimentos, obrigado!
