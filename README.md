@@ -35,8 +35,6 @@ Este projeto é uma **Single Page Application (SPA)** desenvolvida para facilita
 - **Orquestração com Docker Compose:**  
   Para evitar que cada serviço precise ser iniciado individualmente, implementei um **Docker Compose** que gerencia **backend, frontend e banco de dados** de forma automática. Assim, ao rodar um único comando, todos os containers sobem juntos e já conectados corretamente.
 
-#### **Acesse a aplicação em produção:** https://desafio-clarke-energia.netlify.app
-
 ## Como Rodar o Projeto Localmente?
 
 Antes de começar, verifique se sua máquina possui os seguintes pré-requisitos instalados:  
